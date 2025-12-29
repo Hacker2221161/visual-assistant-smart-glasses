@@ -1,181 +1,171 @@
-# Product Roadmap
+# Visual Assistant — Development Roadmap
 
-## Project: Visual Assistant Smart Glasses
-
-This roadmap outlines the phased development of the Visual Assistant system, from concept validation to real-world deployment.
+This roadmap defines the staged technical evolution of the Visual Assistant system.
+Each phase must be completed and validated before moving to the next.
 
 ---
 
-## Phase 0 — Research & Foundations (Completed)
+## Phase 0 — Concept & Trust Foundation ✅ (COMPLETED)
 
-**Status:** ✅ Completed
+Status: DONE
 
-### Goals
-- Define product vision and principles
-- Establish system architecture
-- Define security, privacy, and accessibility standards
-
-### Deliverables
+Artifacts:
 - README.md
 - ARCHITECTURE.md
 - SECURITY.md
 - ACCESSIBILITY.md
-- PRODUCT_VISION.md
+- RISK_ANALYSIS.md
+- LICENSE
+
+Goals:
+- Define system vision and constraints
+- Establish safety-first and privacy-first principles
+- Identify unacceptable risk categories
+- Ensure accessibility is a core feature, not an add-on
+
+Exit criteria:
+- No unresolved high-risk items
+- Clear ethical boundaries documented
 
 ---
 
-## Phase 1 — Core Prototype (MVP)
+## Phase 1 — Core Logic Prototype (NO HARDWARE)
 
-**Status:** 🟡 Planned
+Status: PLANNED
 
-### Goals
-- Build a functional end-to-end prototype
-- Validate core assumptions
-- Test usability with simulated scenarios
+Scope:
+- Abstract decision-making logic
+- Context awareness engine (logic only)
+- Safety rule evaluation
+- Kill-switch logic (logical layer)
 
-### Features
-- Camera-based obstacle detection
-- Basic object recognition
-- Audio feedback via text-to-speech
-- Voice command interface
-- On-device processing (no cloud dependency)
+No access to:
+- Camera
+- Microphone
+- Network
+- GPS (real)
 
-### Technical Focus
-- Computer vision pipeline
-- Latency optimization
-- Battery efficiency
-- Offline-first operation
+Deliverables:
+- /src/core/context_engine.py
+- /src/core/safety_engine.py
+- /src/core/kill_switch.py
 
-### Success Criteria
-- Accurate obstacle detection
-- Sub-second response time
-- Stable operation without cloud access
-
----
-
-## Phase 2 — Navigation & Context Awareness
-
-**Status:** 🔵 Planned
-
-### Goals
-- Enable safe navigation in urban environments
-- Add contextual understanding
-
-### Features
-- Crosswalk and traffic signal detection
-- Sidewalk and path recognition
-- Public transport cues
-- Indoor navigation support
-- Directional audio guidance
-
-### Technical Focus
-- Scene understanding
-- Multi-sensor fusion
-- Environmental classification
+Success criteria:
+- Deterministic behavior
+- 100% test coverage for safety rules
+- No side effects or external dependencies
 
 ---
 
-## Phase 3 — Safety & Reliability Hardening
+## Phase 2 — Simulation & Testing Environment
 
-**Status:** 🔵 Planned
+Status: PLANNED
 
-### Goals
-- Make the system reliable in real-world conditions
-- Handle edge cases and failures gracefully
+Scope:
+- Synthetic sensor input simulation
+- Context scenario playback
+- Failure-mode testing
+- Edge-case validation
 
-### Features
-- Hazard prioritization system
-- Emergency alerts
-- Fail-safe modes
-- Redundant warning mechanisms
+Deliverables:
+- /simulator/mock_inputs.py
+- /simulator/scenario_runner.py
+- /tests/
 
-### Technical Focus
-- Risk assessment algorithms
-- Fault tolerance
-- System health monitoring
+Key scenarios:
+- Walking on roadway
+- Inactivity / sleep detection
+- False positive prevention
+- Emergency override
 
----
-
-## Phase 4 — User Testing & Accessibility Validation
-
-**Status:** 🔵 Planned
-
-### Goals
-- Validate real usability with visually impaired users
-- Improve comfort and trust
-
-### Activities
-- Closed beta testing
-- Accessibility audits
-- Feedback-driven iteration
-- Audio and interaction tuning
-
-### Success Criteria
-- Positive user feedback
-- Reduced cognitive load
-- Increased user confidence
+Exit criteria:
+- No false-negative safety failures
+- All critical paths covered by tests
 
 ---
 
-## Phase 5 — Hardware Integration
+## Phase 3 — Accessibility-First Interaction Layer
 
-**Status:** 🔵 Planned
+Status: PLANNED
 
-### Goals
-- Transition from prototype to wearable device
+Scope:
+- Voice-only interaction logic (abstracted)
+- Haptic feedback logic (abstracted)
+- Zero-vision operation mode
+- Assistive priority routing
 
-### Features
-- Custom smart glasses hardware
-- Optimized camera placement
-- Lightweight form factor
-- Extended battery life
+Deliverables:
+- /src/accessibility/voice_interface.py
+- /src/accessibility/haptic_feedback.py
 
-### Technical Focus
-- Embedded systems
-- Power management
-- Thermal optimization
-
----
-
-## Phase 6 — Production Readiness
-
-**Status:** 🔵 Planned
-
-### Goals
-- Prepare for real-world deployment
-- Ensure compliance and reliability
-
-### Activities
-- Security audits
-- Performance benchmarking
-- Documentation finalization
-- Manufacturing planning
+Constraints:
+- Must function without visual output
+- Must be interruptible at all times
 
 ---
 
-## Phase 7 — Ecosystem Expansion
+## Phase 4 — Hardware Abstraction Layer (HAL)
 
-**Status:** 🔵 Future
+Status: FUTURE
 
-### Goals
-- Enable third-party innovation
-- Scale accessibility impact
+Scope:
+- Hardware interfaces via abstraction only
+- No direct sensor access by apps
+- Permission-gated data flow
 
-### Features
-- Developer SDK
-- Plugin architecture
-- Open accessibility APIs
-- Community contributions
+Deliverables:
+- /hal/sensors.py
+- /hal/power.py
+- /hal/indicators.py
+
+Security requirements:
+- Physical LED indicator for camera/mic
+- User-controlled hard disable
 
 ---
 
-## Guiding Principle
-Progress is measured not by feature count, but by **user safety, trust, and independence**.
+## Phase 5 — On-Device AI Integration
+
+Status: FUTURE
+
+Scope:
+- Local inference only
+- No cloud dependency by default
+- Explainable decision outputs
+
+Constraints:
+- AI must NEVER override safety rules
+- AI must be fully disableable
+
+Deliverables:
+- /ai/context_model.py
+- /ai/explainability.py
 
 ---
 
-## Closing Note
-This roadmap is intentionally realistic.
-No shortcuts.
-No hype.
-Only responsible innovation.
+## Phase 6 — Developer SDK (Optional)
+
+Status: OPTIONAL
+
+Scope:
+- Third-party applications
+- Strict sandboxing
+- Safety policy enforcement
+
+Constraints:
+- No raw sensor access
+- No background execution without user awareness
+
+---
+
+## Final Principle
+
+If any phase introduces:
+- Human safety risk
+- Loss of user control
+- Non-consensual data collection
+
+→ Development MUST STOP.
+
+Trust is not a feature.
+Trust is the system.
