@@ -1,74 +1,226 @@
-# Risk Analysis & Mitigation
+# Risk Analysis — Visual Assistant Smart Glasses
 
-## Project: Visual Assistant Smart Glasses
+## Version
+v1.0
 
-This document identifies potential risks associated with the Visual Assistant Smart Glasses project and defines mitigation strategies to ensure user safety, reliability, and ethical compliance.
+## Purpose
+This document identifies, classifies, and mitigates risks associated with the development, deployment, and use of the Visual Assistant system.
+
+The goal is to **prevent harm, misuse, legal issues, and ethical violations** before scaling.
 
 ---
 
-## 1. Safety Risks
+## 1. Risk Classification
 
-### 1.1 False Negatives (Missed Hazards)
+Risks are divided into:
+- Technical
+- User Safety
+- Privacy & Ethics
+- Legal & Regulatory
+- Business & Adoption
 
-**Description:**  
-The system fails to detect an obstacle or danger (e.g., stairs, vehicles, holes).
+Each risk includes:
+- Description
+- Severity
+- Probability
+- Mitigation strategy
 
-**Impact:**  
-High — potential physical injury.
+---
+
+## 2. Technical Risks
+
+### 2.1 Hardware Failure
+**Description:** Camera, IMU, or display malfunction  
+**Severity:** High  
+**Probability:** Medium  
+
+**Mitigation:**
+- Fail-safe shutdown
+- User-visible error notification
+- Redundant sensor validation
+
+---
+
+### 2.2 Latency Spikes
+**Description:** Delays in processing leading to outdated alerts  
+**Severity:** High  
+**Probability:** Medium  
+
+**Mitigation:**
+- Hard latency limits
+- Frame dropping under load
+- Priority given to safety alerts
+
+---
+
+### 2.3 Battery Depletion
+**Description:** Sudden loss of power during use  
+**Severity:** Medium  
+**Probability:** Medium  
+
+**Mitigation:**
+- Battery health monitoring
+- Low-power mode
+- Early shutdown warnings
+
+---
+
+## 3. User Safety Risks
+
+### 3.1 Over-Reliance on System
+**Description:** User treats system as primary navigation  
+**Severity:** Critical  
+**Probability:** Medium  
+
+**Mitigation:**
+- Explicit warnings
+- No turn-by-turn navigation
+- Periodic reminders: “This is an assistive system”
+
+---
+
+### 3.2 Alert Misinterpretation
+**Description:** User misunderstands alert meaning  
+**Severity:** High  
+**Probability:** Medium  
+
+**Mitigation:**
+- Simple alert language
+- Visual + audio redundancy
+- No abstract symbols without text
+
+---
+
+### 3.3 False Negatives
+**Description:** System misses a real obstacle  
+**Severity:** Critical  
+**Probability:** Low  
 
 **Mitigation:**
 - Conservative detection thresholds
-- Multi-frame confirmation
-- Prioritize recall over precision
-- Audio warnings designed to be immediate and distinct
-- Encourage complementary use with traditional mobility aids (e.g., cane)
+- Clear uncertainty indicators
+- Never suppress alerts for UX reasons
 
 ---
 
-### 1.2 False Positives (Non-existent Hazards)
+## 4. Privacy & Ethical Risks
 
-**Description:**  
-The system warns about obstacles that are not present.
-
-**Impact:**  
-Medium — user confusion, loss of trust.
+### 4.1 Unintentional Recording
+**Description:** System stores or leaks visual data  
+**Severity:** Critical  
+**Probability:** Low  
 
 **Mitigation:**
-- Confidence-based alerting
-- Gradual alert escalation
-- User-adjustable sensitivity levels
-- Continuous model tuning based on testing feedback
+- Zero persistent storage by default
+- Memory-only frame processing
+- No background recording
 
 ---
 
-### 1.3 Latency & Delayed Feedback
-
-**Description:**  
-System responds too slowly to real-time hazards.
-
-**Impact:**  
-High — delayed reaction may cause accidents.
+### 4.2 Bystander Privacy Violation
+**Description:** People nearby are unknowingly analyzed  
+**Severity:** High  
+**Probability:** Medium  
 
 **Mitigation:**
-- On-device processing only
-- Real-time performance constraints
-- Priority scheduling for hazard detection
-- Graceful degradation under load
+- No identity recognition
+- No facial analysis
+- Visual recording indicators
 
 ---
 
-## 2. Hardware Risks
-
-### 2.1 Camera Obstruction or Damage
-
-**Description:**  
-Camera lens blocked, dirty, or damaged.
-
-**Impact:**  
-High — loss of situational awareness.
+### 4.3 Feature Creep into Surveillance
+**Description:** Pressure to add unethical features  
+**Severity:** Critical  
+**Probability:** Medium  
 
 **Mitigation:**
-- Camera health monitoring
-- User notification on obstruction
-- Fail-safe mode with clear audio indication
-- Physical lens
+- Ethics.md as hard constraint
+- Public commitment to privacy-first design
+- Feature rejection policy
+
+---
+
+## 5. Legal & Regulatory Risks
+
+### 5.1 Data Protection Laws (GDPR, etc.)
+**Description:** Violation of data protection regulations  
+**Severity:** High  
+**Probability:** Medium  
+
+**Mitigation:**
+- No personal data storage
+- No user profiling
+- Local-only processing
+
+---
+
+### 5.2 Assistive Device Liability
+**Description:** Product mistaken for medical device  
+**Severity:** High  
+**Probability:** Low  
+
+**Mitigation:**
+- Clear non-medical disclaimer
+- Avoid health diagnostics
+- No medical claims in marketing
+
+---
+
+## 6. Business & Adoption Risks
+
+### 6.1 User Trust Deficit
+**Description:** Users fear surveillance  
+**Severity:** High  
+**Probability:** High  
+
+**Mitigation:**
+- Open documentation
+- Transparent permissions
+- Visible privacy indicators
+
+---
+
+### 6.2 Market Misunderstanding
+**Description:** Product compared to AR toys or spy tech  
+**Severity:** Medium  
+**Probability:** Medium  
+
+**Mitigation:**
+- Clear positioning as assistive tech
+- Conservative design language
+- Avoid “futuristic” marketing hype
+
+---
+
+## 7. Kill-Switch Policy
+
+The system MUST include:
+- Instant sensor disable
+- Full shutdown by user
+- Physical interaction override
+
+Failure to implement kill-switch invalidates the product.
+
+---
+
+## 8. Risk Acceptance Statement
+
+Visual Assistant accepts **technical limitations**  
+but rejects **ethical compromise**.
+
+Any risk that endangers:
+- Human safety
+- Human dignity
+- Human privacy
+
+is considered **unacceptable**, regardless of business value.
+
+---
+
+## Final Statement
+
+Risk management is not optional.  
+It is the core architecture of trust.
+
+Without trust, the product must not exist.
