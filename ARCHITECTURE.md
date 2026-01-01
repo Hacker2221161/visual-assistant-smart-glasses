@@ -1,174 +1,151 @@
-# Visual Assistant — System Architecture
+# Vector Architecture
 
-## 1. Overview
+This document describes the high-level architecture of the Vector ecosystem.
 
-Visual Assistant is a wearable, context-aware smart glasses platform designed to assist users in real-world scenarios through visual, auditory, and sensor-based feedback.
-
-The system is designed with a **hybrid philosophy**:
-- Practical implementation using current consumer-grade hardware
-- Forward-looking architecture that allows gradual expansion as technology evolves
-
-Core priorities:
-- Safety
-- Accessibility
-- Minimal distraction
-- Privacy-first processing
+Vector is designed as a modular, layered system that separates perception, reasoning, interaction, and ethics to ensure safety, scalability, and accessibility.
 
 ---
 
-## 2. High-Level Architecture
+## Design Principles
 
-The system is divided into five primary layers:
-
-1. Hardware Layer  
-2. Firmware & OS Layer  
-3. Core Services Layer  
-4. Application Layer  
-5. Companion Device Layer  
-
----
-
-## 3. Hardware Layer
-
-### Components:
-- Dual micro-displays (waveguide or micro-OLED)
-- Front-facing camera (environmental awareness)
-- IMU (accelerometer, gyroscope)
-- GPS (via companion device)
-- Microphones (voice input, ambient sound)
-- Touch / button input on temple arms
-- Modular battery system
-- Haptic feedback module
-
-### Design Philosophy:
-- Hardware must remain minimal and lightweight
-- No always-on recording by default
-- Sensors activate only when context requires
+- Human-in-the-loop decision making
+- Accessibility-first architecture
+- Privacy-by-design
+- Modular and extensible components
+- Clear separation of responsibilities
+- Ethical constraints enforced at system level
 
 ---
 
-## 4. Firmware & OS Layer
+## High-Level Architecture Overview
 
-### Responsibilities:
-- Power management
-- Sensor fusion
-- Input handling (buttons, gaze, voice)
-- Secure boot and firmware validation
+Vector consists of five core layers:
 
-### OS Concept:
-- Lightweight real-time OS or microkernel-based system
-- Deterministic behavior for safety-critical alerts
-- Sandboxed application execution
+1. Perception Layer  
+2. Context & Interpretation Layer  
+3. AI Core Layer  
+4. Interaction Layer  
+5. Safety & Ethics Layer  
 
----
-
-## 5. Core Services Layer
-
-### Context Awareness Engine
-Combines data from:
-- IMU
-- Camera
-- GPS (from phone)
-- Time-of-day
-- User activity patterns
-
-Used to detect:
-- Walking on roadway
-- Sleep state
-- Inactivity
-- Potential hazards
+Each layer can evolve independently without breaking the system.
 
 ---
 
-### Health Monitoring Service
-- Step counting
-- Activity estimation
-- Heart rate (via external wearable integration)
-- Sleep estimation based on usage inactivity and circadian patterns
+## 1. Perception Layer
 
-> Health data is processed locally where possible.
+Responsible for collecting raw input data.
 
----
+Possible inputs:
+- Cameras (environment, objects, text)
+- Microphones (directional sound)
+- Inertial sensors (movement, head position)
+- Eye tracking
+- Touch and haptic sensors
+- External devices (wheelchairs, wearables)
 
-### Safety & Alert System
-- Roadway detection warnings
-- Environmental hazard alerts
-- Emergency event detection
-- Priority-based notification system
+This layer performs **no decision-making**.
 
 ---
 
-## 6. Application Layer
+## 2. Context & Interpretation Layer
 
-Applications are modular and optional.
+Transforms raw sensor data into structured context.
 
-Examples:
-- Visual Assistant Core
-- Live Health Dashboard
-- Navigation Overlay
-- Accessibility Mode (Vision Impairment)
+Functions:
+- Object and scene recognition
+- Sound localization
+- Text recognition (OCR)
+- Movement and spatial awareness
+- User state estimation (focus, fatigue, overload)
 
-### Interaction Model:
-- Side menu activated via physical button
-- Navigation via gaze direction or repeated button presses
-- Voice as primary interaction when hands are busy
+This layer prepares data for AI reasoning.
 
 ---
 
-## 7. Accessibility-First Design
+## 3. AI Core Layer
 
-Accessibility is not an add-on — it is a **core system mode**.
+The cognitive guidance core of Vector.
 
-Features:
-- Voice-first UI
-- Audio descriptions
-- High-contrast visuals
-- Braille labeling on physical packaging
-- Dedicated accessibility onboarding flow
+Responsibilities:
+- Context prioritization
+- Relevance filtering
+- Suggestion generation
+- Accessibility adaptation
 
----
+Key principle:
+> The AI does not decide.  
+> It proposes options and directions.
 
-## 8. Companion Device Layer (Smartphone)
-
-The smartphone acts as:
-- Computational offload
-- GPS provider
-- Network gateway
-- Data visualization hub
-
-Communication:
-- Encrypted Bluetooth / UWB
-- No cloud dependency by default
+AI can be:
+- Rules-based (critical accessibility paths)
+- Hybrid (rules + constrained generative models)
 
 ---
 
-## 9. Privacy & Security
+## 4. Interaction Layer
 
-- No continuous cloud streaming
-- Local-first processing
-- Explicit user consent for all data collection
-- Hardware indicator for camera/mic usage
-- Secure data storage and encryption
+Handles how information is delivered to the user.
 
----
+Supported interaction modes:
+- Visual overlays
+- Audio guidance
+- Haptic feedback
+- Text output
+- Gesture and eye-based input
+- Head movement input
 
-## 10. Future Expansion
-
-Planned evolution paths:
-- On-device AI acceleration
-- Eye-tracking support
-- Advanced medical integrations
-- Expanded battery ecosystem
-- Third-party application SDK
+Interaction mode depends on system version and user capabilities.
 
 ---
 
-## 11. Project Status
+## 5. Safety & Ethics Layer
 
-This document represents a **conceptual and architectural design**.
-No commercial hardware implementation currently exists.
+The most critical layer.
+
+Functions:
+- Enforces Vector Helper Laws
+- Prevents harmful use
+- Blocks illegal or unethical behavior
+- Maintains user agency
+- Prevents AI overreach
+
+This layer has override priority over all others.
+
+📜 Ethical rules defined in:  
+→ [LAWS.md](LAWS.md)  
+→ [ETHICS.md](ETHICS.md)
 
 ---
 
-## Author
-Andronik (Russia)
+## Version Adaptability
+
+All Vector versions share the same architecture.
+
+Differences between versions exist only in:
+- Enabled sensors
+- Interaction methods
+- Priority rules
+
+This ensures:
+- Unified maintenance
+- Ethical consistency
+- Scalable development
+
+---
+
+## Privacy Considerations
+
+- Preference for on-device processing
+- Minimal data retention
+- No hidden surveillance
+- User-controlled data flow
+
+Cloud interaction is optional and limited.
+
+---
+
+## Summary
+
+Vector is not a single device architecture.
+
+It is a **scalable ethical AI system** capable of adapting to different human needs while preserving safety, dignity, and control.
