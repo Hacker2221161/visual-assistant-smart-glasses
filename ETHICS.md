@@ -1,129 +1,114 @@
-# Ethical Principles & Responsible AI Use
+# Ethics and Responsible Use
 
-## Project: Visual Assistant Smart Glasses
+## Purpose
 
-This document defines the ethical foundations, boundaries, and responsibilities guiding the design and development of the Visual Assistant Smart Glasses project.
+The Vector Project is built on the principle that technology must serve humanity, not control it.
 
-The system is intended to **assist**, not replace, human perception and decision-making.
-
----
-
-## 1. Human-Centered Design
-
-- The user remains the final decision-maker at all times
-- The system does not act autonomously
-- No forced behavior or automated control is permitted
-- Assistance must be transparent, predictable, and interruptible
+This document defines the ethical framework of Vector and establishes boundaries for its design, deployment, and use. Vector is not a decision-maker, authority, or surveillance system. It is an assistive, human-centered tool.
 
 ---
 
-## 2. Assistive, Not Substitutive Technology
+## Ethical Foundation
 
-This project is explicitly designed as:
-- An **assistive aid**
-- Not a navigation replacement
-- Not a medical device
-- Not a safety guarantee
+Vector follows a **human-in-the-loop** model:
+- The system provides guidance, suggestions, and situational awareness
+- The human user always retains final decision-making authority
 
-The system must **never claim** full situational awareness or perfect accuracy.
+Vector is designed to reduce cognitive load, improve accessibility, and support independence — not to replace human judgment.
 
 ---
 
-## 3. Transparency & Honesty
+## Core Ethical Principles
 
-- Limitations must be clearly communicated
-- Confidence levels should be disclosed where applicable
-- Failure states must be obvious to the user
-- No misleading performance claims are allowed
+Vector adheres to the following principles:
 
-If the system is uncertain, it must communicate uncertainty.
+### 1. Human Benefit First
+Vector must be used exclusively for the benefit of individuals and society.
+
+### 2. Non-Maleficence
+Vector must not be used to cause harm, enable violence, or facilitate abuse — directly or indirectly.
+
+### 3. Responsibility Through Action and Inaction
+Vector must not cause harm through action or deliberate inaction when assistance is possible within ethical and legal boundaries.
+
+### 4. Advisory Role Only
+Vector does not make decisions.  
+It proposes options and interpretations — the final choice always belongs to the human.
+
+### 5. Legal Compliance
+Vector must not be used to violate the laws or regulations of any country or jurisdiction.
+
+These principles are formally defined as the **Vector Helper Laws**.
 
 ---
 
-## 4. Privacy by Design
+## Vector Helper Laws
 
-- No continuous recording
-- No covert surveillance
-- No biometric identification of individuals
-- No facial recognition
+The ethical rules governing Vector are documented in detail in:
+
+📄 **[VECTOR_LAWS.md](./VECTOR_LAWS.md)**
+
+All system behavior, AI constraints, and future development must comply with these laws.
+
+---
+
+## Privacy and Data Ethics
+
+Vector follows a **privacy-by-design** approach:
+- On-device AI processing by default
+- Minimal data collection
+- No hidden telemetry
 - No behavioral profiling
+- No biometric data storage without explicit user consent
 
-All processing is designed to be **local-first** and **ephemeral by default**.
-
----
-
-## 5. Consent & Respect for Bystanders
-
-- The system must avoid unnecessary data capture
-- No storage or transmission of identifiable third-party data
-- User awareness of active sensing is mandatory
-- Design should minimize social intrusion
-
-Respect for others is non-negotiable.
+User trust is a core system requirement, not a feature.
 
 ---
 
-## 6. Bias Awareness & Fairness
+## Accessibility Ethics
 
-- Models may exhibit bias due to environmental or data limitations
-- Bias must be acknowledged, not hidden
-- Testing should include diverse environments and conditions
-- The system must avoid assumptions about people or intent
+Accessibility is not an add-on.
 
-The system interprets environments — **not individuals**.
+Vector is designed to:
+- Adapt to different physical, sensory, and cognitive abilities
+- Support independence and dignity
+- Avoid stigmatizing design patterns
+- Offer equal system value across all versions
 
----
-
-## 7. Safety Over Features
-
-When conflicts arise:
-- Safety overrides functionality
-- Stability overrides novelty
-- Reliability overrides performance
-
-No feature is worth increasing user risk.
+Different versions exist to meet different needs — not to rank users.
 
 ---
 
-## 8. Responsible Failure
+## Prohibited Use Cases
 
-In case of malfunction:
-- Fail loudly, not silently
-- Inform the user immediately
-- Avoid ambiguous states
-- Prefer shutdown over misleading behavior
-
----
-
-## 9. Prohibited Uses
-
-The system must NOT be used for:
-- Surveillance or tracking
-- Law enforcement or military targeting
-- Crowd monitoring
-- Identification of individuals
-- Covert recording
-- Manipulation or deception
-
-Any fork enabling these uses violates the ethical intent of this project.
+Vector must not be used for:
+- Surveillance or tracking of individuals without consent
+- Military targeting or weapon guidance
+- Manipulation, coercion, or behavioral control
+- Medical diagnosis without certified medical oversight
+- Law enforcement profiling or social scoring systems
 
 ---
 
-## 10. Accountability
+## Evolution and Accountability
 
-Developers and contributors share responsibility for:
-- Ethical impact
-- User safety
-- Honest communication
-- Respect for human dignity
+As technology evolves, Vector’s ethical framework must evolve with it — without compromising core principles.
 
-Contributions that compromise these principles will not be accepted.
+Hardware may change.  
+AI models may improve.  
+Ethics remain constant.
 
 ---
 
-## Final Ethical Statement
+## Closing Statement
 
-Technology should **amplify human capability without diminishing human autonomy**.
+Vector is not just an assistive system.  
+It is a responsibility.
 
-Visual Assistant Smart Glasses exists to support people —  
-not to watch them, judge them, or control them.
+Technology should extend human capability —  
+not replace humanity.
+
+---
+
+**Vector Project**  
+Ethics-first Assistive AI Research
