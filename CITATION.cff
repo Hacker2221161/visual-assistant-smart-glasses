@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use or reference this project, please cite it as follows."
+
+title: "Vector Helper: Visual Assistant Smart Glasses (Concept & Architecture)"
+authors:
+  - family-names: "Zorbayan"
+    given-names: "Andronik"
+
+date-released: 2025-12-30
+
+repository-code: "https://github.com/Hacker2221161/visual-assistant-smart-glasses"
+
+abstract: >
+  Vector Helper is an open conceptual and architectural framework for an
+  AI-based visual assistant ecosystem designed to improve accessibility,
+  reduce cognitive overload, and support ethical human-centered interaction.
+  This repository documents system architecture, ethical constraints,
+  accessibility principles, and long-term vision rather than a finished product.
+
+keywords:
+  - accessibility
+  - assistive technology
+  - AI ethics
+  - augmented reality
+  - smart glasses
+  - cognitive assistance
+  - human-centered AI
+
+license: "Apache-2.0"
