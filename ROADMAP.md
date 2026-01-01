@@ -1,171 +1,136 @@
-# Visual Assistant — Development Roadmap
+# Project Roadmap
 
-This roadmap defines the staged technical evolution of the Visual Assistant system.
-Each phase must be completed and validated before moving to the next.
-
----
-
-## Phase 0 — Concept & Trust Foundation ✅ (COMPLETED)
-
-Status: DONE
-
-Artifacts:
-- README.md
-- ARCHITECTURE.md
-- SECURITY.md
-- ACCESSIBILITY.md
-- RISK_ANALYSIS.md
-- LICENSE
-
-Goals:
-- Define system vision and constraints
-- Establish safety-first and privacy-first principles
-- Identify unacceptable risk categories
-- Ensure accessibility is a core feature, not an add-on
-
-Exit criteria:
-- No unresolved high-risk items
-- Clear ethical boundaries documented
+This roadmap outlines the long-term vision and phased development of the Vector Project.
+Vector is designed as an evolving assistive AI ecosystem rather than a single device or product.
 
 ---
 
-## Phase 1 — Core Logic Prototype (NO HARDWARE)
+## Phase 1 — Concept & Foundations (Current)
 
-Status: PLANNED
+**Status:** In progress
 
-Scope:
-- Abstract decision-making logic
-- Context awareness engine (logic only)
-- Safety rule evaluation
-- Kill-switch logic (logical layer)
+### Goals
+- Define system philosophy and ethical boundaries
+- Establish assistive-first and accessibility-driven design
+- Create a modular, scalable architecture
 
-No access to:
-- Camera
-- Microphone
-- Network
-- GPS (real)
-
-Deliverables:
-- /src/core/context_engine.py
-- /src/core/safety_engine.py
-- /src/core/kill_switch.py
-
-Success criteria:
-- Deterministic behavior
-- 100% test coverage for safety rules
-- No side effects or external dependencies
+### Key Deliverables
+- Project vision and documentation
+- Vector Helper Laws
+- Ethics and Responsible AI framework
+- Definition of multiple user-centered system versions
+- Early hardware and software architecture concepts
 
 ---
 
-## Phase 2 — Simulation & Testing Environment
+## Phase 2 — MVP & Smart Glasses Platform
 
-Status: PLANNED
+### Goals
+- Build a functional smart glasses-based assistive system
+- Validate real-world usability and accessibility value
+- Minimize cognitive load and maximize clarity
 
-Scope:
-- Synthetic sensor input simulation
-- Context scenario playback
-- Failure-mode testing
-- Edge-case validation
+### Focus Areas
+- On-device computer vision
+- Real-time scene understanding
+- Directional guidance and prioritization
+- Privacy-first local processing
 
-Deliverables:
-- /simulator/mock_inputs.py
-- /simulator/scenario_runner.py
-- /tests/
-
-Key scenarios:
-- Walking on roadway
-- Inactivity / sleep detection
-- False positive prevention
-- Emergency override
-
-Exit criteria:
-- No false-negative safety failures
-- All critical paths covered by tests
+### Supported Versions
+- **Basic** — general cognitive guidance
+- **Pro** — advanced context awareness
+- **Vision Assist** — version for visually impaired users
 
 ---
 
-## Phase 3 — Accessibility-First Interaction Layer
+## Phase 3 — Multisensory Accessibility Expansion
 
-Status: PLANNED
+### Goals
+- Extend Vector to support users with multiple and combined disabilities
+- Enable communication and perception beyond vision alone
 
-Scope:
-- Voice-only interaction logic (abstracted)
-- Haptic feedback logic (abstracted)
-- Zero-vision operation mode
-- Assistive priority routing
+### New System Versions
+- **Hearing Assist** — speech-to-text, sound localization, visual audio cues
+- **Deafblind Assist** — haptic feedback, vibration-based communication
+- **Mobility Assist** — eye, head, and voice-based interaction for paralyzed users
 
-Deliverables:
-- /src/accessibility/voice_interface.py
-- /src/accessibility/haptic_feedback.py
-
-Constraints:
-- Must function without visual output
-- Must be interruptible at all times
-
----
-
-## Phase 4 — Hardware Abstraction Layer (HAL)
-
-Status: FUTURE
-
-Scope:
-- Hardware interfaces via abstraction only
-- No direct sensor access by apps
-- Permission-gated data flow
-
-Deliverables:
-- /hal/sensors.py
-- /hal/power.py
-- /hal/indicators.py
-
-Security requirements:
-- Physical LED indicator for camera/mic
-- User-controlled hard disable
+### Technologies
+- Multi-microphone audio capture
+- Sound direction visualization
+- Advanced haptic feedback patterns
+- Gaze and head motion tracking
 
 ---
 
-## Phase 5 — On-Device AI Integration
+## Phase 4 — Haptics & Wearable Ecosystem
 
-Status: FUTURE
+### Goals
+- Move beyond glasses into a full assistive ecosystem
+- Provide redundancy and adaptability across devices
 
-Scope:
-- Local inference only
-- No cloud dependency by default
-- Explainable decision outputs
+### Planned Components
+- Haptic bands and wearables
+- Smart canes and mobility accessories
+- AI-assisted wheelchairs
+- Modular external sensors
 
-Constraints:
-- AI must NEVER override safety rules
-- AI must be fully disableable
-
-Deliverables:
-- /ai/context_model.py
-- /ai/explainability.py
-
----
-
-## Phase 6 — Developer SDK (Optional)
-
-Status: OPTIONAL
-
-Scope:
-- Third-party applications
-- Strict sandboxing
-- Safety policy enforcement
-
-Constraints:
-- No raw sensor access
-- No background execution without user awareness
+### Principles
+- Device independence
+- Seamless cross-device communication
+- Accessibility-first hardware design
 
 ---
 
-## Final Principle
+## Phase 5 — Lens-Based and Minimal Hardware Systems
 
-If any phase introduces:
-- Human safety risk
-- Loss of user control
-- Non-consensual data collection
+### Goals
+- Reduce physical device footprint
+- Increase comfort and long-term usability
 
-→ Development MUST STOP.
+### Research Directions
+- Smart contact lenses
+- Micro-projection and retinal display systems
+- Ultra-low power edge AI
+- Energy-efficient neural processing units
 
-Trust is not a feature.
-Trust is the system.
+---
+
+## Phase 6 — Neural & Bio-Interface Research (Long-Term)
+
+### Goals
+- Explore future interaction paradigms for extreme accessibility needs
+
+### Research Areas
+- Non-invasive neural interfaces
+- Brain-computer interaction (BCI)
+- Advanced bio-signal interpretation
+- Direct intent detection (research-only)
+
+### Ethical Constraints
+- Strict adherence to Vector Helper Laws
+- No invasive experimentation
+- No behavioral manipulation
+- Human agency remains mandatory
+
+---
+
+## Continuous Focus Areas (All Phases)
+
+- Accessibility and inclusivity
+- Privacy-by-design
+- Responsible and transparent AI
+- Human-in-the-loop decision models
+- Security and misuse prevention
+
+---
+
+## Closing Vision
+
+Vector is not a single product.
+
+It is a long-term assistive technology platform designed to evolve alongside humanity and technology — without compromising ethics, dignity, or human control.
+
+---
+
+**Vector Project**  
+Future-facing Assistive AI Ecosystem
