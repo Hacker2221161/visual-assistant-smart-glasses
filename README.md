@@ -1,108 +1,138 @@
-# Vector Project
+# Vector Helper
 
-**Vector** is an ethical, human-centered AI ecosystem designed to provide cognitive guidance, accessibility support, and assistive technologies for people with and without disabilities.
+**Vector Helper** is a modular AI-based personal assistance ecosystem
+designed to improve accessibility, reduce cognitive overload,
+and provide equal digital access for all users.
 
-Vector does not replace human decision-making.  
-Vector provides direction, not control.
-
-> **AI that gives direction.**
-
----
-
-## Project Vision
-
-Vector exists to reduce cognitive, sensory, and informational overload in real-world and digital environments.
-
-The project focuses on:
-- Accessibility-first design
-- Privacy-by-design AI
-- Human-in-the-loop systems
-- Ethical and transparent behavior
-- Modular assistive technologies
+The system is built from the ground up to adapt to different
+physical, sensory, and cognitive abilities.
 
 ---
 
-## Vector Ecosystem
+## Project Goals
 
-Vector is not a single product.
-
-It is a **modular ecosystem** consisting of:
-- AI Core
-- Smart Glasses Platform
-- Assistive hardware extensions
-- Accessibility-focused system versions
-
-📄 Full ecosystem description:  
-→ [ECOSYSTEM.md](ECOSYSTEM.md)
+- Universal accessibility
+- Modular and scalable architecture
+- Human-in-the-loop decision making
+- Support for users with and without disabilities
+- Cross-device ecosystem design
 
 ---
 
-## System Versions
+## Vector Editions
 
-Vector supports multiple system configurations:
+### Vector Base
+Core version for general users.
 
-- **Basic** — general cognitive guidance
-- **Pro** — advanced contextual awareness
-- **Vision Assist** — for visually impaired users
-- **Hearing Assist** — for deaf and hard-of-hearing users
-- **Deafblind Assist** — haptic-based perception
-- **Mobility Assist** — for paralyzed users (eye, head, voice control)
-
-All versions share a unified AI core.
+**Features:**
+- Voice interaction
+- Visual interface
+- Context-aware assistance
+- Device integration
 
 ---
 
-## Ethical Foundation
+### Vector Pro
+Advanced version for professional and extended use.
 
-Vector operates under strict ethical constraints.
-
-📜 Vector Helper Laws:  
-→ [LAWS.md](LAWS.md)
-
-🧭 Ethical principles and boundaries:  
-→ [ETHICS.md](ETHICS.md)
-
----
-
-## Architecture Overview
-
-The system is designed as a layered architecture:
-- Perception layer
-- AI core
-- Interaction layer
-- Safety & ethics layer
-
-📐 Technical overview:  
-→ [ARCHITECTURE.md](ARCHITECTURE.md)
+**Features:**
+- Deep contextual understanding
+- Multi-device synchronization
+- Advanced personalization
+- Extended accessory support
 
 ---
 
-## Roadmap & Future Research
+### Vector Vision (Blind & Low-Vision Users)
 
-Planned future directions include:
-- Smart contact lenses
-- Advanced haptics
-- Neural and bio-interfaces (research only)
+**Features:**
+- Full voice control
+- Environmental audio descriptions
+- Navigation assistance
+- Visual-independent operation
 
-🗺 Full roadmap:  
-→ [ROADMAP.md](ROADMAP.md)
+---
+
+### Vector Silence (Deaf & Mute Users)
+
+**Features:**
+- Text and gesture-based control
+- Visual notifications
+- Speech-to-text for surrounding audio
+- Haptic feedback support
+
+---
+
+### Vector Sense (Deafblind Users)
+
+**Features:**
+- Haptic-based interaction
+- Tactile navigation
+- Minimal reliance on audio and visuals
+- Specialized accessibility hardware
+
+---
+
+### Vector Motion (Paralyzed Users)
+
+**Features:**
+- Eye-tracking control
+- Head-movement input
+- Voice control (when possible)
+- Integration with AI-assisted wheelchairs
+
+---
+
+## Ecosystem
+
+Vector Helper is designed as an ecosystem, not a single device.
+
+- Smart glasses
+- Accessibility accessories
+- Haptic interfaces
+- AI-enabled wheelchairs
+- Future neural interfaces
+
+Each component can operate:
+- Independently
+- Or as part of a unified system
+
+---
+
+## Architecture
+
+The system follows a modular architecture:
+
+- Core AI
+- Interface Modules
+- Accessibility Layer
+- Device Abstraction Layer
+- Ethics & Safety Layer
+
+This structure allows new interfaces, devices, and editions
+to be added without redesigning the entire system.
+
+---
+
+## Ethics
+
+The project follows **Vector Helper Laws**  
+(see `LAWS.md`)
+
+Ethical constraints are enforced at the system level.
 
 ---
 
 ## Project Status
 
-This repository represents an **early-stage research and concept project**.
-
-It is not a commercial product and is published for:
-- Research discussion
-- Ethical exploration
-- Accessibility innovation
-- Long-term development planning
+**Stage:** Concept / Early Architecture  
+**Open for:** Research, discussion, architectural contributions
 
 ---
 
-## Author
+## Contribution
 
-**Andronik**  
-Independent engineering student  
-Vector Project author
+The project is currently focused on defining a strong
+architectural and ethical foundation.
+
+Ideas, design discussions, and conceptual contributions are welcome.
