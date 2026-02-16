@@ -1,0 +1,17 @@
+{
+  "frames_processed": 1508,
+  "objects_detected": 1774,
+  "text_readings": 10,
+  "screenshots": 5,
+  "duration_seconds": 109.97,
+  "average_fps": 15.2,
+  "top_objects": {
+    "person": 955,
+    "bottle": 704,
+    "chair": 112,
+    "bird": 1,
+    "vase": 1,
+    "wine glass": 1
+  },
+  "timestamp": "2026-02-17T01:57:50.080793"
+}

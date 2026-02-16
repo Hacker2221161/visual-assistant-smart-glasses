@@ -1,0 +1,19 @@
+{
+  "frames": 0,
+  "objects_detected": 2537,
+  "text_readings": 12,
+  "screenshots": 5,
+  "start_time": "2026-02-17T01:49:29.123389",
+  "end_time": "2026-02-17T01:52:53.912202",
+  "duration_seconds": 204.78881287574768,
+  "top_objects": {
+    "person": 1276,
+    "bottle": 1215,
+    "chair": 23,
+    "spoon": 16,
+    "wine glass": 3,
+    "knife": 2,
+    "remote": 1,
+    "cell phone": 1
+  }
+}

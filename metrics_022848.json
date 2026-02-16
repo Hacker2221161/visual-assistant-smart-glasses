@@ -1,0 +1,17 @@
+{
+  "version": "v1.0.0 - Prototype",
+  "session": {
+    "frames": 460,
+    "objects": 565,
+    "text_scans": 2,
+    "screenshots": 0,
+    "duration_sec": 53.34,
+    "avg_fps": 8.62
+  },
+  "top_objects": {
+    "person": 285,
+    "bottle": 276,
+    "snowboard": 4
+  },
+  "timestamp": "2026-02-17T02:28:48.042194"
+}
