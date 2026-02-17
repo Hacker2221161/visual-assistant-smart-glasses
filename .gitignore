@@ -1,0 +1,27 @@
+﻿# Python
+venv/
+env/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Logs
+logs/
+*.log
+
+# Metrics
+*.json
+metrics_*.json
+stats_*.json
+
+# Screenshots
+shot_*.jpg
+*.png
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
